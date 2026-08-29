@@ -10,15 +10,15 @@
 
 Claude Code:
 ```
-/plugin marketplace add taoufik123-collab/claude-watch
+/plugin marketplace add RAMC-Management/claude-watch
 /plugin install watch@claude-watch
 ```
 
-claude.ai (web): [download `watch.skill`](https://github.com/taoufik123-collab/claude-watch/releases/latest) and drop it into Settings → Capabilities → Skills.
+claude.ai (web): [download `watch.skill`](https://github.com/RAMC-Management/claude-watch/releases/latest) and drop it into Settings → Capabilities → Skills. This fork has no published release yet — build the bundle locally with `bash scripts/build-skill.sh`.
 
 Codex / generic skills:
 ```bash
-git clone https://github.com/taoufik123-collab/claude-watch.git ~/.codex/skills/watch
+git clone https://github.com/RAMC-Management/claude-watch.git ~/.codex/skills/watch
 ```
 
 Zero config to start — `yt-dlp` and `ffmpeg` install on first run via `brew` on macOS (Linux/Windows print exact commands). Captions cover most public videos for free. Whisper API key is only needed when a video has no captions. Set `$WATCH_VAULT_DIR` to point at your Obsidian vault for auto-save, or leave it unset and the skill skips the ingest step quietly.
@@ -86,16 +86,16 @@ When the user names a moment ("around 2:30", "the last 30 seconds", "from 0:45 t
 
 | Surface | Install |
 |---------|---------|
-| **Claude Code** | `/plugin marketplace add taoufik123-collab/claude-watch` then `/plugin install watch@claude-watch` |
-| **claude.ai** (web) | [Download `watch.skill`](https://github.com/taoufik123-collab/claude-watch/releases/latest) → Settings → Capabilities → Skills → `+` |
-| **Codex** | `git clone https://github.com/taoufik123-collab/claude-watch.git ~/.codex/skills/watch` |
-| **Manual / dev** | `git clone https://github.com/taoufik123-collab/claude-watch.git ~/.claude/skills/watch` |
+| **Claude Code** | `/plugin marketplace add RAMC-Management/claude-watch` then `/plugin install watch@claude-watch` |
+| **claude.ai** (web) | [Download `watch.skill`](https://github.com/RAMC-Management/claude-watch/releases/latest) → Settings → Capabilities → Skills → `+`. No release published on this fork yet — build locally with `bash scripts/build-skill.sh` |
+| **Codex** | `git clone https://github.com/RAMC-Management/claude-watch.git ~/.codex/skills/watch` |
+| **Manual / dev** | `git clone https://github.com/RAMC-Management/claude-watch.git ~/.claude/skills/watch` |
 | **Configuration** | Optional: `export WATCH_VAULT_DIR=/path/to/your/obsidian/vault` to enable auto-save. Auto-detects `~/Second brain/`, `~/Documents/Obsidian/`, `~/Obsidian/`. |
 
 ### Claude Code
 
 ```
-/plugin marketplace add taoufik123-collab/claude-watch
+/plugin marketplace add RAMC-Management/claude-watch
 /plugin install watch@claude-watch
 ```
 
@@ -103,7 +103,9 @@ Update later with `/plugin update watch@claude-watch`.
 
 ### claude.ai (web)
 
-1. [Download `watch.skill`](https://github.com/taoufik123-collab/claude-watch/releases/latest) from the latest release.
+This fork has not published a release yet, so the download link below 404s until one is tagged. Until then, build the bundle yourself with `bash scripts/build-skill.sh` and upload the resulting `dist/watch.skill`.
+
+1. [Download `watch.skill`](https://github.com/RAMC-Management/claude-watch/releases/latest) from the latest release.
 2. Go to Settings → Capabilities → Skills.
 3. Click `+` and drop the file in.
 
@@ -112,13 +114,13 @@ Enable "Code execution and file creation" under Capabilities first — the skill
 ### Codex
 
 ```bash
-git clone https://github.com/taoufik123-collab/claude-watch.git ~/.codex/skills/watch
+git clone https://github.com/RAMC-Management/claude-watch.git ~/.codex/skills/watch
 ```
 
 ### Manual (developer)
 
 ```bash
-git clone https://github.com/taoufik123-collab/claude-watch.git ~/.claude/skills/watch
+git clone https://github.com/RAMC-Management/claude-watch.git ~/.claude/skills/watch
 ```
 
 ## First run
@@ -221,4 +223,4 @@ Built on `yt-dlp`, `ffmpeg`, and Claude's multimodal `Read` tool. Whisper transc
 
 ---
 
-[github.com/taoufik123-collab/claude-watch](https://github.com/taoufik123-collab/claude-watch) · [Credits](#credits) · [LICENSE](LICENSE)
+[github.com/RAMC-Management/claude-watch](https://github.com/RAMC-Management/claude-watch) · [Credits](#credits) · [LICENSE](LICENSE)
